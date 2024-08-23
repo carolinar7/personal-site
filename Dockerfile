@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build-backend /go/app/personal-site .
 
 # Copy frontend build
-COPY --from=build-frontend /app/.svelte-kit/output ./frontend
+COPY --from=build-frontend /app/dist ./frontend
 
 # Ensure the `personal-site` file has execute permissions
 RUN chmod +x personal-site
