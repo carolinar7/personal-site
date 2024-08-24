@@ -2,15 +2,19 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+	"log"
+	"os"
+
+	"personal-site/server"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World!")
-}
-
-// Simple server
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	if len(os.Args) != 2 {
+		log.Fatal("No arguments given. Please pass the path to the client code.")
+	}
+
+	pathToStaticWebsite := os.Args[1]
+
+	fmt.Println("Starting Server")
+	server.Run(pathToStaticWebsite)
 }

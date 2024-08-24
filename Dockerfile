@@ -26,4 +26,4 @@ COPY --from=build-frontend /app/dist ./frontend
 RUN chmod +x personal-site
 
 # Serve the frontend
-CMD ["./personal-site"]
+CMD ["./personal-site", "frontend"]
