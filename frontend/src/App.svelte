@@ -1,10 +1,6 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte'
+  import HomePage from "./lib/home/HomePage.svelte";
 </script>
 
-<h1 class="text-2xl font-bold">Counter</h1>
-
-<Counter />
-
-<style lang="postcss">
-</style>
+<!-- Future Router Spot -->
+<HomePage />

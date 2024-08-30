@@ -1,0 +1,11 @@
+.md-layout {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 0 1em;
+}
+
+@media (max-width: 641px) {
+  .md-layout {
+    padding: 0 1.5em;
+  }
+}
