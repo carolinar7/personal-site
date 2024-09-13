@@ -1,5 +1,5 @@
 ## Docker + GCP Cloud Run
-Played around with containarizing my website + creating a server for it + building through CI/CD pipeline :)
+Played around with containarizing my website + creating a server for it + building through CD pipeline :)
 ### Commands to run
 `docker build -t personal-site .` and then `docker run -p 8080:8080 personal-site`
 ### Helpfule commands
