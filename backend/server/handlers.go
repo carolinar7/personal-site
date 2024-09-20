@@ -23,13 +23,21 @@ func fileServerWrapper(pathToStaticWebsite string, pathToServe string) http.Hand
 }
 
 // Route handler
-func homeHandler(pathToStaticWebsite string) http.HandlerFunc {
+func pageHandler(pathToStaticWebsite string, expectedPath string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		urlPath := html.EscapeString(r.URL.Path)
-		if urlPath == "/" {
+		if urlPath == expectedPath {
 			http.ServeFile(w, r, path.Join(pathToStaticWebsite, "index.html"))
 		} else {
 			w.WriteHeader(http.StatusNotFound)
 		}
 	}
+}
+
+func homeHandler(pathToStaticWebsite string) http.HandlerFunc {
+	return pageHandler(pathToStaticWebsite, "/")
+}
+
+func writingsHandler(pathToStaticWebsite string) http.HandlerFunc {
+	return pageHandler(pathToStaticWebsite, "/writings")
 }

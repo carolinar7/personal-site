@@ -14,6 +14,9 @@ func Run(pathToStaticWebsite string) {
 	// Home Page
 	http.Handle("/", handlerFuncWrapper(pathToStaticWebsite, homeHandler))
 
+	// Writings Page
+	http.Handle("/writings", handlerFuncWrapper(pathToStaticWebsite, writingsHandler))
+
 	// Start web server in seperate blocking thread
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

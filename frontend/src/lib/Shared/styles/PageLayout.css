@@ -2,10 +2,24 @@
   margin: 0 auto;
   max-width: 768px;
   padding: 0 1em;
+  min-height: calc(100vh - 6em);
 }
 
 @media (max-width: 641px) {
   .md-layout {
     padding: 0 1.5em;
+  }
+}
+
+/* These map to the body styles found in index.html */
+@media (min-width: 768px) {
+  .md-layout {
+    min-height: calc(100vh - 3em);
+  }
+}
+
+@media (min-width: 641px) {
+  .md-layout {
+    min-height: calc(100vh - 12em);
   }
 }
