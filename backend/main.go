@@ -15,6 +15,6 @@ func main() {
 
 	pathToStaticWebsite := os.Args[1]
 
-	fmt.Println("Starting Server")
+	fmt.Println("Starting Server at http://localhost:8080/")
 	server.Run(pathToStaticWebsite)
 }
