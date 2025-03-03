@@ -1,4 +1,4 @@
-<div class="pt-3 pb-8">
+<div class="pb-8">
   <p>
     software engineer...sometimes product and design ;)...<a
       class="font-bold"

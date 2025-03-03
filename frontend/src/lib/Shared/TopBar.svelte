@@ -9,7 +9,7 @@
   ];
 </script>
 
-<header class="flex items-start justify-between flex-wrap">
+<header class="flex items-start justify-between flex-wrap pb-3">
   <h1 class="font-bold text-2xl mb-3">
     <Link to={'/'}>Frederick Santiago</Link>
   </h1>

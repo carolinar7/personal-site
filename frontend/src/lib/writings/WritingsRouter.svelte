@@ -1,19 +1,15 @@
 <script lang="ts">
-  import { Router, Route } from "svelte-routing";
-  import StruggleLoadingBar from "../Shared/StruggleLoadingBar.svelte";
-
-  let { id } = $props();
-
-  export let url = ""
-
-  const redirectItems = [
-    {to: '/abc', component: StruggleLoadingBar},
-  ]
+  import { Route, Router } from 'svelte-routing';
+  import WritingsPage from './WritingsPage.svelte';
+  import { writingOptions } from './writingsOptions';
+  import NiceTry from '../../NiceTry.svelte';
+  import NestedRouters from './pages/NestedRouters.svelte';
 </script>
 
-<!-- Future Router Spot -->
-<Router {url}>
-  {#each redirectItems as redirectedItem}
-    <Route path={redirectedItem.to} component={redirectedItem.component} />
+<Router>
+  {#each writingOptions as writingOption}
+    <Route path={`/${writingOption.id}`} component={NestedRouters} />
   {/each}
+  <Route path={'/'} component={WritingsPage} />
+  <Route path={'/*'} component={NiceTry} />
 </Router>
