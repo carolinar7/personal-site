@@ -3,7 +3,7 @@
   import WritingsPage from './WritingsPage.svelte';
   import { writingOptions } from './writingsOptions';
   import NiceTry from '../../NiceTry.svelte';
-  import NestedRouters from './pages/NestedRouters.svelte';
+  import NestedRouters from './pages/3-2025/NestedRouters.svelte';
 </script>
 
 <Router>

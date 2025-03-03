@@ -1,7 +1,15 @@
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { mdsvex } from "mdsvex"
 
 export default {
   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
   // for more information about preprocessors
-  preprocess: vitePreprocess(),
+  extensions: ['.svelte', '.svx', '.md'],
+  preprocess: [
+    vitePreprocess(),
+    // Documentation: https://mdsvex.pngwn.io/docs#install-it
+    mdsvex({
+      extensions: ['.svx', '.md'],
+    }),
+  ],
 }

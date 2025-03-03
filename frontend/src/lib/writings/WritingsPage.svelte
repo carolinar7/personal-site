@@ -3,6 +3,7 @@
   import { Link } from 'svelte-routing';
   import { writingOptions } from './writingsOptions';
   import WritingOption from './WritingOption.svelte';
+  import StruggleLoadingBar from '../Shared/StruggleLoadingBar.svelte';
 </script>
 
 <svelte:head>
@@ -15,7 +16,12 @@
 
 <div class="md-layout relative">
   <TopBar />
-  <h1 class="pb-8">a collection of thoughts that were once just in my mind</h1>
+  <div
+    class="absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 w-3/4 text-center"
+  >
+    <StruggleLoadingBar />
+  </div>
+  <!-- <h1 class="pb-8">a collection of thoughts that were once just in my mind</h1>
   <main>
     <ul>
       {#each writingOptions as writingOption}
@@ -30,5 +36,5 @@
         </li>
       {/each}
     </ul>
-  </main>
+  </main> -->
 </div>

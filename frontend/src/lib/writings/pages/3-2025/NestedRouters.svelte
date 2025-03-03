@@ -1,5 +1,7 @@
 <script lang="ts">
-  import TopBar from '../../Shared/TopBar.svelte';
+  import TopBar from '../../../Shared/TopBar.svelte';
+  import NestedRoutersMarkdowns from './markdown/NestedRouters.md';
+  import WritingsPageWrapper from '../WritingsPageWrapper.svelte';
 </script>
 
 <svelte:head>
@@ -19,5 +21,8 @@
 </svelte:head>
 
 <div class="md-layout relative">
-  <TopBar />
+  <WritingsPageWrapper>
+    <TopBar />
+    <NestedRoutersMarkdowns />
+  </WritingsPageWrapper>
 </div>
